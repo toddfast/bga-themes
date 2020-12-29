@@ -1,0 +1,130 @@
+@use "_func" as c;
+
+/* Lobby */
+#gamelobby-module {
+	/* Structure of the DOM:
+	#gamelobby-module
+		...
+		favorite_section <-- This is where .compactlobby, .verycompactlobby, and .tiny_verycompactlobby appear
+			...
+			.wannaplay_games_list
+				.game_box_wrap
+					.wannaplay_item
+						.game_box_image_wrap
+						.game_box_mask
+							.game_box_mask_content
+						.gamename .wannaplay_gamename
+							.gamenameinner
+						.wannaplayauto_play_zone
+	*/
+
+	#lobby_invite_more_friend_button .lobby_invite_friend_avatar, 
+	#lobby_add_friend_button .lobby_invite_friend_avatar {
+		background-color: c.tint(#222);
+	}
+	
+	.game_box_wrap {
+		margin-right: 20px;
+		border: 2px solid c.tint(#111);
+		&.tables_available {
+			border: 2px solid c.tint(#000);
+		}
+
+		.wannaplay_item {
+			background:radial-gradient(#{"ellipse /**/at /**/center"}, c.tint(#555)#{"/**/ -50%"}, c.tint(#191919));
+			.game_box_mask {
+				left:unset;
+				right:-20px;
+				top:40px;
+				.wannaplay_mask_button.del_favorite {
+					background-color: c.tint(#444);
+					border: 1px solid c.tint(#000);
+				}
+			}
+					
+			/* The actual game box image */
+			.game_box_image_wrap {
+				position: absolute;
+				top: 7px;
+				zoom: 120%;
+			}
+
+			.wannaplay_gamename {
+				top: 250px;
+				.gamenameinner {
+					width: 90%;
+					text-align: center;
+					left: 8px;
+					a {
+						&:link, &:visited {
+							color: c.tint(#666);
+						}
+					}
+				}
+			}
+	
+			.emblempremium_big {
+				position: absolute;
+				right: unset;
+				left: -16px;
+			}
+		}
+	}
+
+	/* Hide the redundant Play now! button */
+	.wannaplayauto_play_zone_content {
+		display: none;
+		.wannaplayauto_button {
+			box-shadow: 0 5px 10px 0 c.tint(rgba(0, 0, 0, 0.7));
+		}
+	}
+
+	/* Medium and small icons display mode */
+	.compactlobby {
+		.game_box_wrap {
+			.wannaplay_item {
+				.game_box_mask {
+					right: -26px;
+				}
+				.wannaplay_gamename {
+					top: 145px;
+				}
+				.gamenameinner {
+					width: 90%;
+				}
+			}
+		}
+	}
+
+	.verycompactlobby {
+		.game_box_wrap {
+			.wannaplay_item {
+				.game_box_mask {
+					right: -26px;
+				}
+				.wannaplay_gamename {
+					top: 145px;
+				}
+				.gamenameinner {
+					width: 90%;
+				}
+				.game_box_image_wrap {
+					top: 15px;
+				}
+			}
+		}
+	}
+
+	/* Tiny icons display mode */
+	.tiny_verycompactlobby {
+		.game_box_wrap {
+			.wannaplay_item {
+				.game_box_image_wrap {
+					top: 2px;
+					left: 2px;
+					zoom: unset;
+				}
+			}
+		}		
+	}
+}

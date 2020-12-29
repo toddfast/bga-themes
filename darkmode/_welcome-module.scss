@@ -1,0 +1,24 @@
+@use "_func" as c;
+
+/* Welcome module */
+#welcome-module {
+	.post {
+		border-bottom: 1px c.tint(#666) solid;
+	}
+
+	.comment {
+		background-image: none;
+		background-color: c.tint(rgba(245, 245, 245, 0.15));
+		border-radius: 6px;
+	}
+
+	.extended_message_hidden:after {
+		left: 67px;
+		background: linear-gradient(#{"to /**/bottom"}, c.tint(rgba(32, 32, 32, 0)), c.tint(rgba(32, 32, 32, 1)));
+	}
+
+	.board_fake_input {
+		background-color: c.tint(#222);
+		border: 1px solid c.tint(#b3b3b3);
+	}
+}

@@ -1,0 +1,28 @@
+@use "_func" as c;
+
+/* Game page */
+.game_interface {
+	#logs {
+		overflow: scroll;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+
+		&::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+		}
+
+		.log .roundedbox {
+			background-color: c.tint(rgba(222, 222, 222, 0.65));
+			border-radius: 5px;
+		}
+	}
+
+	.player-board {
+		background: #eee;
+	}
+
+	#pagemaintitletext > span:first-of-type {
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	}
+}

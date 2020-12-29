@@ -1,0 +1,6 @@
+@use "_func" as c;
+
+/* Communty page */
+#community-module .col-md-6 .tips {
+	background-color: c.tint(#202020);
+}

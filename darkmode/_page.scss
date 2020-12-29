@@ -1,0 +1,43 @@
+@use "_func" as c;
+
+/* Page and common header */
+html {
+	background: radial-gradient(#{"ellipse /**/at /**/top"},c.tint(#555), c.tint(#0A0A0A)), 
+		radial-gradient(#{"ellipse /**/at /**/bottom"}, c.tint(#555), c.tint(#0A0A0A)), 
+		url(https://wallpaperaccess.com/full/781329.jpg);
+	background-attachment: fixed;
+	background-position: center;
+}
+
+#topbar {
+	background: c.tint(#222);
+}
+
+#async_table_banner {
+	color: #fff;
+	background-color: #e00;
+	a {
+		color: #0cc;
+		&:link, &:visited {
+			color: #0cc;
+		}
+	}
+}
+
+#page-title {
+	background-color: c.tint(rgba(88, 88, 88, 0.75)) !important;
+	color: #fff;
+}
+
+.current_player_is_active #page-title {
+	background-color: c.tint(#777); 
+}
+
+.pageheader {
+	background-color: transparent;
+	color: #fff;
+}
+
+.pageheader_menuitembar {
+	border-radius: 0 0 6px 6px;
+}

@@ -1,0 +1,391 @@
+/* Page and common header */
+html {
+  background: radial-gradient(ellipse /**/at /**/top, #555566, #0a0a1b), radial-gradient(ellipse /**/at /**/bottom, #555566, #0a0a1b), url(https://wallpaperaccess.com/full/781329.jpg);
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#topbar {
+  background: #222233;
+}
+
+#async_table_banner {
+  color: #fff;
+  background-color: #e00;
+}
+#async_table_banner a {
+  color: #0cc;
+}
+#async_table_banner a:link, #async_table_banner a:visited {
+  color: #0cc;
+}
+
+#page-title {
+  background-color: rgba(88, 88, 105, 0.75) !important;
+  color: #fff;
+}
+
+.current_player_is_active #page-title {
+  background-color: #777788;
+}
+
+.pageheader {
+  background-color: transparent;
+  color: #fff;
+}
+
+.pageheader_menuitembar {
+  border-radius: 0 0 6px 6px;
+}
+
+/* General rules */
+.newbgatable th {
+  text-transform: capitalize;
+  color: #fff;
+}
+.newbgatable td {
+  color: #fff;
+}
+
+.gametable {
+  border: 1px #000011 solid;
+  background-color: #444455;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.pagesection {
+  background-color: rgba(64, 64, 81, 0.5);
+  color: #fff;
+}
+
+#pagesection_about {
+  color: #FFF;
+}
+
+.pagesection h2, .portlet h2, .pagesection h3, .portlet h3 {
+  background: linear-gradient(#888899, #777788);
+  color: #111122;
+}
+
+a.bgabutton_gray {
+  background-color: #FFF;
+}
+
+span.bgabutton_gray {
+  background: #bbbbcc;
+}
+
+.bgabutton_blue {
+  background: #71b648;
+}
+
+.pageheader_menu_verylarge .pageheader_big_switch {
+  background-color: #333344;
+  color: #FFF;
+}
+
+.tabbed_slider_bar_left, .tabbed_slider_bar_right {
+  border-top: 28px solid #444455;
+}
+
+.tabbed_slider_bar_barcenter, #pageheaderlobby {
+  background: #444455;
+}
+
+.switcher_zone {
+  background: linear-gradient(#333344, #111122);
+  border-left: 1px solid #555566;
+}
+.switcher_zone .fa-caret-down {
+  text-shadow: 1px 0 1px #777788;
+  color: #333;
+}
+
+.icon_plus span {
+  top: -3px !important;
+}
+
+.statstable th {
+  background-color: #222233;
+}
+
+.gametable_separator {
+  background-color: #222233;
+}
+
+.playernotification_not_read {
+  background-color: #edbab7;
+}
+
+.dijitInputInner {
+  background-color: #222233 !important;
+  color: #fff;
+}
+
+.controlpanelmenu .panelmenuicon, .controlpanelmenu .subtitle {
+  color: unset;
+}
+
+.dj_webkit .tundra .dijitTooltipContainer {
+  box-shadow: 0 5px 10px #111122;
+}
+
+.dijitPopup > a.bgabutton_gray, .dijitPopup a.bgabutton_gray {
+  color: #111122;
+}
+
+.dijitTooltipDialogPopup a.bgabutton_gray, .gametable a.bgabutton_gray {
+  border: 1px solid #111122;
+  color: #111122;
+}
+
+/* Welcome module */
+#welcome-module .post {
+  border-bottom: 1px #666677 solid;
+}
+#welcome-module .comment {
+  background-image: none;
+  background-color: rgba(245, 245, 255, 0.15);
+  border-radius: 6px;
+}
+#welcome-module .extended_message_hidden:after {
+  left: 67px;
+  background: linear-gradient(to /**/bottom, rgba(32, 32, 49, 0), #202031);
+}
+#welcome-module .board_fake_input {
+  background-color: #222233;
+  border: 1px solid #b3b3c4;
+}
+
+/* Games list */
+#gamelist-module select {
+  background-color: #222233;
+  color: #FFF;
+}
+#gamelist-module .game_category_more_wrap {
+  display: none;
+}
+#gamelist-module .gamelist_item {
+  box-shadow: none;
+  margin-right: 30px;
+}
+#gamelist-module .gamelist_item .game_box_image_wrap {
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #111122;
+  background: radial-gradient(ellipse /**/at /**/center, #555/**/ -50%, #19192a);
+}
+#gamelist-module .gamelist_item .game_box_image_wrap img:hover {
+  transform: scale(1.05);
+}
+#gamelist-module .gamelist_item .game_box_image_wrap .emblempremium_big {
+  position: absolute;
+  right: unset;
+  left: -16px;
+}
+#gamelist-module .gamelist_item {
+  zoom: 110%;
+}
+#gamelist-module .gamelist_itemrow {
+  overflow: visible;
+}
+#gamelist-module .gamename {
+  font-size: 20px;
+  position: relative;
+  left: 10px;
+  top: 2px;
+  color: #666677;
+}
+
+.notouch-device #gamelist-module .gamelist_item:hover {
+  background-color: transparent;
+}
+
+.notouch-device #gamelist-module a:hover {
+  color: #666677;
+  text-decoration: none;
+}
+
+.notouch-device #gamelist-module a .gamename:hover {
+  color: #666677;
+  text-decoration: underline;
+}
+
+/* Lobby */
+#gamelobby-module {
+  /* Structure of the DOM:
+  #gamelobby-module
+  	...
+  	favorite_section <-- This is where .compactlobby, .verycompactlobby, and .tiny_verycompactlobby appear
+  		...
+  		.wannaplay_games_list
+  			.game_box_wrap
+  				.wannaplay_item
+  					.game_box_image_wrap
+  					.game_box_mask
+  						.game_box_mask_content
+  					.gamename .wannaplay_gamename
+  						.gamenameinner
+  					.wannaplayauto_play_zone
+  */
+  /* Hide the redundant Play now! button */
+  /* Medium and small icons display mode */
+  /* Tiny icons display mode */
+}
+#gamelobby-module #lobby_invite_more_friend_button .lobby_invite_friend_avatar,
+#gamelobby-module #lobby_add_friend_button .lobby_invite_friend_avatar {
+  background-color: #222233;
+}
+#gamelobby-module .game_box_wrap {
+  margin-right: 20px;
+  border: 2px solid #111122;
+}
+#gamelobby-module .game_box_wrap.tables_available {
+  border: 2px solid #000011;
+}
+#gamelobby-module .game_box_wrap .wannaplay_item {
+  background: radial-gradient(ellipse /**/at /**/center, #555566 /**/ -50%, #19192a);
+  /* The actual game box image */
+}
+#gamelobby-module .game_box_wrap .wannaplay_item .game_box_mask {
+  left: unset;
+  right: -20px;
+  top: 40px;
+}
+#gamelobby-module .game_box_wrap .wannaplay_item .game_box_mask .wannaplay_mask_button.del_favorite {
+  background-color: #444455;
+  border: 1px solid #000011;
+}
+#gamelobby-module .game_box_wrap .wannaplay_item .game_box_image_wrap {
+  position: absolute;
+  top: 7px;
+  zoom: 120%;
+}
+#gamelobby-module .game_box_wrap .wannaplay_item .wannaplay_gamename {
+  top: 250px;
+}
+#gamelobby-module .game_box_wrap .wannaplay_item .wannaplay_gamename .gamenameinner {
+  width: 90%;
+  text-align: center;
+  left: 8px;
+}
+#gamelobby-module .game_box_wrap .wannaplay_item .wannaplay_gamename .gamenameinner a:link, #gamelobby-module .game_box_wrap .wannaplay_item .wannaplay_gamename .gamenameinner a:visited {
+  color: #666677;
+}
+#gamelobby-module .game_box_wrap .wannaplay_item .emblempremium_big {
+  position: absolute;
+  right: unset;
+  left: -16px;
+}
+#gamelobby-module .wannaplayauto_play_zone_content {
+  display: none;
+}
+#gamelobby-module .wannaplayauto_play_zone_content .wannaplayauto_button {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 17, 0.7);
+}
+#gamelobby-module .compactlobby .game_box_wrap .wannaplay_item .game_box_mask {
+  right: -26px;
+}
+#gamelobby-module .compactlobby .game_box_wrap .wannaplay_item .wannaplay_gamename {
+  top: 145px;
+}
+#gamelobby-module .compactlobby .game_box_wrap .wannaplay_item .gamenameinner {
+  width: 90%;
+}
+#gamelobby-module .verycompactlobby .game_box_wrap .wannaplay_item .game_box_mask {
+  right: -26px;
+}
+#gamelobby-module .verycompactlobby .game_box_wrap .wannaplay_item .wannaplay_gamename {
+  top: 145px;
+}
+#gamelobby-module .verycompactlobby .game_box_wrap .wannaplay_item .gamenameinner {
+  width: 90%;
+}
+#gamelobby-module .verycompactlobby .game_box_wrap .wannaplay_item .game_box_image_wrap {
+  top: 15px;
+}
+#gamelobby-module .tiny_verycompactlobby .game_box_wrap .wannaplay_item .game_box_image_wrap {
+  top: 2px;
+  left: 2px;
+  zoom: unset;
+}
+
+/* Table module */
+#table-module .pageheader {
+  background-color: rgba(0, 0, 17, 0.4);
+  color: #fff;
+}
+#table-module .game_progression_bar {
+  top: inherit;
+  border: 1px #9999aa solid;
+}
+#table-module .whiteblock {
+  background-image: none;
+  background-color: #444455;
+  border-radius: 10px;
+}
+#table-module .active_player_left {
+  border-right: 1px #666677 solid;
+}
+
+/* Game page */
+.game_interface #logs {
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.game_interface #logs::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.game_interface #logs .log .roundedbox {
+  background-color: rgba(222, 222, 239, 0.65);
+  border-radius: 5px;
+}
+.game_interface .player-board {
+  background: #eee;
+}
+.game_interface #pagemaintitletext > span:first-of-type {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+/* Communty page */
+#community-module .col-md-6 .tips {
+  background-color: #202031;
+}
+
+/* Chat */
+#chatbar .dropshadow {
+  background-image: none;
+}
+#chatbar .msgtime {
+  position: unset;
+  color: #888899;
+}
+#chatbar .chatwindowexpanded {
+  background-color: #eeeeff;
+}
+#chatbar .chatwindowcollapsed {
+  border-radius: 7px 7px 0 0;
+  box-shadow: 0 0 7px 5px rgba(0, 0, 17, 0.3);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+#chatbar .chatwindowcollapsedtitle {
+  top: 6px;
+  left: 9px;
+}
+#chatbar .chatwindowlogs {
+  background-color: rgba(0, 0, 17, 0.66);
+  box-shadow: 0 0 7px 5px rgba(0, 0, 17, 0.5);
+}
+#chatbar .chatwindowlogs_zone .roundedbox.chatlog .roundedboxinner {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #000011;
+}
+#chatbar .chatwindowlogs_zone .roundedbox.chatlog.ownchatlog .roundedboxinner {
+  background-color: rgba(100, 100, 117, 0.7);
+  color: #fff;
+}
+
+/*# sourceMappingURL=darkmode-blue.css.map */

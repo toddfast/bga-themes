@@ -1,0 +1,45 @@
+@use "_func" as c;
+
+/* Chat */
+#chatbar {
+	.dropshadow {
+		background-image: none;
+	}
+
+	.msgtime {
+		position: unset;
+		color: c.tint(#888);
+	}
+
+	.chatwindowexpanded {
+		background-color: c.tint(#eee);
+	}
+	
+	.chatwindowcollapsed {
+		border-radius: 7px 7px 0 0;
+		box-shadow: 0 0 7px 5px c.tint(rgba(0, 0, 0, 0.3));
+		background-color: c.tint(rgba(255, 255, 255, 0.9));
+	}
+	
+	.chatwindowcollapsedtitle {
+		top: 6px;
+		left: 9px;
+	}
+
+	.chatwindowlogs {
+		background-color: c.tint(rgba(0, 0, 0, 0.66));
+		box-shadow: 0 0 7px 5px c.tint(rgba(0, 0, 0, 0.5));
+	}
+	
+	.chatwindowlogs_zone .roundedbox.chatlog {
+		.roundedboxinner {
+			background-color: c.tint(rgba(255, 255, 255, 0.7));
+			color: c.tint(#000);
+		}
+
+		&.ownchatlog .roundedboxinner {
+			background-color: c.tint(rgba(100, 100, 100, 0.7));
+			color: #fff;
+		}
+	}
+}

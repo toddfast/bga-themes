@@ -1,0 +1,110 @@
+@use "_func" as c;
+
+/* General rules */
+.newbgatable {
+	th {
+		text-transform: capitalize;
+		color: #fff;
+	}
+
+	td {
+		color: #fff;
+	}
+}
+
+.gametable {
+	border: 1px c.tint(#000) solid;
+	background-color: c.tint(#444);
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.pagesection {
+	background-color: c.tint(rgba(64, 64, 64, 0.5));
+	color: #fff;
+}
+
+#pagesection_about {
+	color: #FFF;
+}
+
+.pagesection h2, .portlet h2, .pagesection h3, .portlet h3 {
+	background: linear-gradient(c.tint(#888), c.tint(#777));
+	color: c.tint(#111);
+}
+
+a.bgabutton_gray {
+	background-color: #FFF;
+}
+
+span.bgabutton_gray {
+	background: c.tint(#bbb);
+}
+
+.bgabutton_blue {
+	background: #71b648;
+}
+
+.pageheader_menu_verylarge .pageheader_big_switch {
+	background-color: c.tint(#333);
+	color: #FFF;
+}
+
+.tabbed_slider_bar_left, .tabbed_slider_bar_right {
+	border-top: 28px solid c.tint(#444);
+}
+
+.tabbed_slider_bar_barcenter, #pageheaderlobby {
+	background: c.tint(#444);
+}
+
+.switcher_zone {
+	background: linear-gradient(c.tint(#333), c.tint(#111));
+	border-left: 1px solid c.tint(#555);
+	.fa-caret-down {
+		text-shadow: 1px 0 1px c.tint(#777);
+		color: #333;
+	}
+}
+
+.icon_plus span {
+	top: (-3px) !important;
+}
+
+.statstable th {
+	background-color: c.tint(#222);
+}
+
+.gametable_separator {
+	background-color: c.tint(#222);
+}
+
+.playernotification_not_read {
+	background-color: #edbab7;
+}
+
+.dijitInputInner {
+	background-color: c.tint(#222) !important;
+	color: #fff;
+}
+
+.controlpanelmenu {
+	.panelmenuicon, .subtitle {
+		color: unset;
+	}
+}
+
+.dj_webkit .tundra .dijitTooltipContainer {
+	box-shadow: 0 5px 10px c.tint(#111);
+}
+
+.dijitPopup {
+	> a.bgabutton_gray, a.bgabutton_gray {
+		color: c.tint(#111);
+	}
+}
+
+.dijitTooltipDialogPopup a.bgabutton_gray, .gametable a.bgabutton_gray {
+	border: 1px solid c.tint(#111);
+	color: c.tint(#111);
+}

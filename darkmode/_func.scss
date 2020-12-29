@@ -1,0 +1,18 @@
+@use "sass:color";
+@use "sass:map";
+
+$red-adjust: 0 !default;
+$green-adjust: 0 !default;
+$blue-adjust: 0 !default;
+$colors: (
+  red-delta: $red-adjust,
+  green-delta: $green-adjust,
+  blue-delta: $blue-adjust
+) !default;
+
+@function tint($base) {
+  @return color.adjust($base, 
+    $red: map.get($colors, "red-delta"), 
+    $green: map.get($colors, "green-delta"), 
+    $blue: map.get($colors, "blue-delta"));
+}

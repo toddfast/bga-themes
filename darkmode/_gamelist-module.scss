@@ -1,0 +1,62 @@
+@use "_func" as c;
+
+/* Games list */
+#gamelist-module {
+	select {
+		background-color: c.tint(#222);
+		color: #FFF;
+	}
+
+	.game_category_more_wrap {
+		display: none;
+	}
+
+	.gamelist_item {
+		box-shadow: none;
+		margin-right: 30px;
+		.game_box_image_wrap {
+			img:hover {
+				transform: scale(1.05);
+			}
+			padding: 10px;
+			border-radius: 8px;
+			border: 2px solid c.tint(#111);
+			background:radial-gradient(#{"ellipse /**/at /**/center"},#{"#555/**/ -50%"}, c.tint(#191919));
+			.emblempremium_big {
+				position: absolute;
+				right: unset;
+				left: -16px;
+			}
+		}
+	}
+
+	.gamelist_item {
+		zoom: 110%;
+	}
+
+	.gamelist_itemrow {
+		overflow: visible;
+	}
+
+	.gamename {
+		font-size: 20px;
+		position: relative;
+		left: 10px;
+    top: 2px;
+		color: c.tint(#666);
+	}
+}
+
+.notouch-device #gamelist-module .gamelist_item:hover {
+	background-color: transparent;
+}
+
+.notouch-device #gamelist-module a:hover {
+	color: c.tint(#666);
+	text-decoration: none;
+}
+
+.notouch-device #gamelist-module a .gamename:hover {
+	color: c.tint(#666);
+	text-decoration: underline;
+}

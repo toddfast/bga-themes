@@ -1,0 +1,24 @@
+@use "_func" as c;
+
+/* Table module */
+#table-module {
+	.pageheader {
+		background-color: c.tint(rgba(0, 0, 0, 0.4));
+		color: #fff;
+	}
+
+	.game_progression_bar {
+		top: inherit;
+		border: 1px c.tint(#999) solid;
+	}
+
+	.whiteblock {
+		background-image: none;
+		background-color: c.tint(#444);
+		border-radius: 10px;
+	}
+
+	.active_player_left {
+		border-right: 1px c.tint(#666) solid;
+	}
+}
