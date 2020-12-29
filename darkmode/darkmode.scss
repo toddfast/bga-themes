@@ -12,10 +12,8 @@ html {
 #async_table_banner {
 	color: #fff;
 	background-color: #e00;
-
 	a {
 		color: #0cc;
-
 		&:link, &:visited {
 			color: #0cc;
 		}
@@ -137,7 +135,6 @@ span.bgabutton_gray {
 
 .dj_webkit .tundra .dijitTooltipContainer {
 	box-shadow: 0 5px 10px #111;
-	-webkit-box-shadow: 0 5px 10px #111;
 }
 
 .dijitPopup {
