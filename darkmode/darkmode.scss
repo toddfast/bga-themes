@@ -1,7 +1,7 @@
 /* Page and common header */
 
 html {
-	background: radial-gradient(ellipse /**/ at /**/top, #555, #0A050A), radial-gradient(ellipse /**/at /**/bottom, #555, #0A050A), url(https://wallpaperaccess.com/full/781329.jpg);
+	background: radial-gradient(#{"ellipse /**/at /**/top"}, #555, #0A050A), radial-gradient(#{"ellipse /**/at /**/bottom"}, #555, #0A050A), url(https://wallpaperaccess.com/full/781329.jpg);
 	background-attachment: fixed;
 	background-position: center;
 }
@@ -208,7 +208,7 @@ span.bgabutton_gray {
 		}
 
 		.wannaplay_item {
-			background:radial-gradient(ellipse/**/at/**/center,#555/**/ -50%,#191919);
+			background:radial-gradient(#{"ellipse /**/at /**/center"},#{"#555/**/ -50%"},#191919);
 			
 			.game_box_mask {
 				left:unset;
