@@ -1,12 +1,77 @@
+@use "sass:color";
+
+// Purple
+$red-adjust: 17;
+$green-adjust: -17;
+$blue-adjust: 17;
+
+// Deep purple
+$adj: 17;
+$red-adjust: 0-$adj/2;
+$green-adjust: 0-$adj;
+$blue-adjust: 0;
+
+// Cafe
+$red-adjust: 17;
+$green-adjust: 0;
+$blue-adjust: -17;
+
+// Blue
+$red-adjust: 0;
+$green-adjust: 0;
+$blue-adjust: 17;
+
+// Green
+$red-adjust: 0;
+$green-adjust: 17;
+$blue-adjust: 0;
+
+// Wine
+$red-adjust: 34;
+$green-adjust: -17;
+$blue-adjust: 0;
+
+// Merlot
+$red-adjust: 70;
+$green-adjust: -17;
+$blue-adjust: 0;
+
+// Orange
+$red-adjust: 255;
+$green-adjust: 79;
+$blue-adjust: 0;
+
+// Deep orange
+$red-adjust: 60;
+$green-adjust: -40;
+$blue-adjust: -120;
+
+// Blood
+$red-adjust: 255-222;
+$green-adjust: 79-222;
+$blue-adjust: 0-222;
+
+// Default
+$red-adjust: 0;
+$green-adjust: 0;
+$blue-adjust: 0;
+
+
+@function tint($base) {
+  @return color.adjust($base, $red: $red-adjust, $green: $green-adjust, $blue: $blue-adjust);
+}
+
 /* Page and common header */
 html {
-	background: radial-gradient(#{"ellipse /**/at /**/top"}, #555, #0A050A), radial-gradient(#{"ellipse /**/at /**/bottom"}, #555, #0A050A), url(https://wallpaperaccess.com/full/781329.jpg);
+	background: radial-gradient(#{"ellipse /**/at /**/top"},tint(#555), tint(#0A0A0A)), 
+		radial-gradient(#{"ellipse /**/at /**/bottom"}, tint(#555), tint(#0A0A0A)), 
+		url(https://wallpaperaccess.com/full/781329.jpg);
 	background-attachment: fixed;
 	background-position: center;
 }
 
 #topbar {
-	background: #222;
+	background:tint(#222);
 }
 
 #async_table_banner {
@@ -21,12 +86,12 @@ html {
 }
 
 #page-title {
-	background-color: rgba(88, 88, 88, 0.75) !important;
-	color: #FFF;
+	background-color: tint(rgba(88, 88, 88, 0.75)) !important;
+	color: #fff;
 }
 
 .current_player_is_active #page-title {
-	background-color: #777;
+	background-color: tint(#777); 
 }
 
 .pageheader {
@@ -52,14 +117,14 @@ html {
 }
 
 .gametable {
-	border: 1px #000 solid;
-	background-color: #444;
+	border: 1px tint(#000) solid;
+	background-color: tint(#444);
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
 
 .pagesection {
-	background-color: rgba(64, 64, 64, 0.5);
+	background-color: tint(rgba(64, 64, 64, 0.5));
 	color: #fff;
 }
 
@@ -68,8 +133,8 @@ html {
 }
 
 .pagesection h2, .portlet h2, .pagesection h3, .portlet h3 {
-	background: linear-gradient(#888, #777);
-	color: #111;
+	background: linear-gradient(tint(#888), tint(#777));
+	color: tint(#111);
 }
 
 a.bgabutton_gray {
@@ -77,7 +142,7 @@ a.bgabutton_gray {
 }
 
 span.bgabutton_gray {
-	background: #bbb;
+	background: tint(#bbb);
 }
 
 .bgabutton_blue {
@@ -85,23 +150,23 @@ span.bgabutton_gray {
 }
 
 .pageheader_menu_verylarge .pageheader_big_switch {
-	background-color: #333;
+	background-color: tint(#333);
 	color: #FFF;
 }
 
 .tabbed_slider_bar_left, .tabbed_slider_bar_right {
-	border-top: 28px solid #444;
+	border-top: 28px solid tint(#444);
 }
 
 .tabbed_slider_bar_barcenter, #pageheaderlobby {
-	background: #444;
+	background: tint(#444);
 }
 
 .switcher_zone {
-	background: linear-gradient(#333, #111);
-	border-left: 1px solid #555;
+	background: linear-gradient(tint(#333), tint(#111));
+	border-left: 1px solid tint(#555);
 	.fa-caret-down {
-		text-shadow: 1px 0 1px #777;
+		text-shadow: 1px 0 1px tint(#777);
 		color: #333;
 	}
 }
@@ -111,11 +176,11 @@ span.bgabutton_gray {
 }
 
 .statstable th {
-	background-color: #222;
+	background-color: tint(#222);
 }
 
 .gametable_separator {
-	background-color: #222;
+	background-color: tint(#222);
 }
 
 .playernotification_not_read {
@@ -123,7 +188,7 @@ span.bgabutton_gray {
 }
 
 .dijitInputInner {
-	background-color: #222 !important;
+	background-color: tint(#222) !important;
 	color: #fff;
 }
 
@@ -134,41 +199,41 @@ span.bgabutton_gray {
 }
 
 .dj_webkit .tundra .dijitTooltipContainer {
-	box-shadow: 0 5px 10px #111;
+	box-shadow: 0 5px 10px tint(#111);
 }
 
 .dijitPopup {
 	> a.bgabutton_gray, a.bgabutton_gray {
-		color: #111;
+		color: tint(#111);
 	}
 }
 
 .dijitTooltipDialogPopup a.bgabutton_gray, .gametable a.bgabutton_gray {
-	border: 1px solid #111;
-	color: #111;
+	border: 1px solid tint(#111);
+	color: tint(#111);
 }
 
 
 /* Welcome module */
 #welcome-module {
 	.post {
-		border-bottom: 1px #666 solid;
+		border-bottom: 1px tint(#666) solid;
 	}
 
 	.comment {
 		background-image: none;
-		background-color: rgba(245, 245, 245, 0.15);
+		background-color: tint(rgba(245, 245, 245, 0.15));
 		border-radius: 6px;
 	}
 
 	.extended_message_hidden:after {
 		left: 67px;
-		background: linear-gradient(#{"to /**/bottom"}, rgba(32, 32, 32, 0), rgba(32, 32, 32, 1));
+		background: linear-gradient(#{"to /**/bottom"}, tint(rgba(32, 32, 32, 0)), tint(rgba(32, 32, 32, 1)));
 	}
 
 	.board_fake_input {
-		background-color: #222;
-		border: 1px solid #b3b3b3;
+		background-color: tint(#222);
+		border: 1px solid tint(#b3b3b3);
 	}
 }
 
@@ -176,7 +241,7 @@ span.bgabutton_gray {
 /* Games list */
 #gamelist-module {
 	select {
-		background-color: #222;
+		background-color: tint(#222);
 		color: #FFF;
 	}
 
@@ -193,8 +258,8 @@ span.bgabutton_gray {
 			}
 			padding: 10px;
 			border-radius: 8px;
-			border: 2px solid #111;
-			background:radial-gradient(#{"ellipse /**/at /**/center"},#{"#555/**/ -50%"},#191919);
+			border: 2px solid tint(#111);
+			background:radial-gradient(#{"ellipse /**/at /**/center"},#{"#555/**/ -50%"},tint(#191919));
 			.emblempremium_big {
 				position: absolute;
 				right: unset;
@@ -216,7 +281,7 @@ span.bgabutton_gray {
 		position: relative;
 		left: 10px;
     top: 2px;
-		color: #666;
+		color: tint(#666);
 	}
 }
 
@@ -230,12 +295,12 @@ span.bgabutton_gray {
 }
 
 .notouch-device #gamelist-module a:hover {
-	color: #666;
+	color: tint(#666);
 	text-decoration: none;
 }
 
 .notouch-device #gamelist-module a .gamename:hover {
-	color: #666;
+	color: tint(#666);
 	text-decoration: underline;
 }
 
@@ -259,25 +324,25 @@ span.bgabutton_gray {
 
 	#lobby_invite_more_friend_button .lobby_invite_friend_avatar, 
 	#lobby_add_friend_button .lobby_invite_friend_avatar {
-		background-color: #222;
+		background-color: tint(#222);
 	}
 	
 	.game_box_wrap {
 		margin-right: 20px;
-		border: 2px solid #111;
+		border: 2px solid tint(#111);
 		&.tables_available {
-			border: 2px solid #000;
+			border: 2px solid tint(#000);
 		}
 
 		.wannaplay_item {
-			background:radial-gradient(#{"ellipse /**/at /**/center"},#{"#555/**/ -50%"},#191919);
+			background:radial-gradient(#{"ellipse /**/at /**/center"},tint(#555)#{"/**/ -50%"},tint(#191919));
 			.game_box_mask {
 				left:unset;
 				right:-20px;
 				top:40px;
 				.wannaplay_mask_button.del_favorite {
-					background-color: #444;
-					border: 1px solid #000;
+					background-color: tint(#444);
+					border: 1px solid tint(#000);
 				}
 			}
 					
@@ -296,7 +361,7 @@ span.bgabutton_gray {
 					left: 8px;
 					a {
 						&:link, &:visited {
-							color: #666;
+							color: tint(#666);
 						}
 					}
 				}
@@ -314,7 +379,7 @@ span.bgabutton_gray {
 	.wannaplayauto_play_zone_content {
 		display: none;
 		.wannaplayauto_button {
-			box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.7);
+			box-shadow: 0 5px 10px 0 tint(rgba(0, 0, 0, 0.7));
 		}
 	}
 
@@ -372,23 +437,23 @@ span.bgabutton_gray {
 /* Table module */
 #table-module {
 	.pageheader {
-		background-color: rgba(0, 0, 0, 0.4);
+		background-color: tint(rgba(0, 0, 0, 0.4));
 		color: #fff;
 	}
 
 	.game_progression_bar {
 		top: inherit;
-		border: 1px #999 solid;
+		border: 1px tint(#999) solid;
 	}
 
 	.whiteblock {
 		background-image: none;
-		background-color: #444;
+		background-color: tint(#444);
 		border-radius: 10px;
 	}
 
 	.active_player_left {
-		border-right: 1px #666 solid;
+		border-right: 1px (#666) solid;
 	}
 }
 
@@ -406,7 +471,7 @@ span.bgabutton_gray {
 		}
 
 		.log .roundedbox {
-			background-color: rgba(222, 222, 222, 0.65);
+			background-color: tint(rgba(222, 222, 222, 0.65));
 			border-radius: 5px;
 		}
 	}
@@ -423,7 +488,7 @@ span.bgabutton_gray {
 
 /* Communty page */
 #community-module .col-md-6 .tips {
-	background-color: #202020;
+	background-color: tint(#202020);
 }
 
 
@@ -435,18 +500,17 @@ span.bgabutton_gray {
 
 	.msgtime {
 		position: unset;
-		color: #888;
+		color: tint(#888);
 	}
 
 	.chatwindowexpanded {
-		background-color: #eee;
+		background-color: tint(#eee);
 	}
 	
 	.chatwindowcollapsed {
 		border-radius: 7px 7px 0 0;
-		-webkit-box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.3);
-		box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.3);
-		background-color: rgba(255, 255, 255, 0.9);
+		box-shadow: 0 0 7px 5px tint(rgba(0, 0, 0, 0.3));
+		background-color: tint(rgba(255, 255, 255, 0.9));
 	}
 	
 	.chatwindowcollapsedtitle {
@@ -455,18 +519,18 @@ span.bgabutton_gray {
 	}
 
 	.chatwindowlogs {
-		background-color: rgba(0, 0, 0, 0.66);
-		box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.5);
+		background-color: tint(rgba(0, 0, 0, 0.66));
+		box-shadow: 0 0 7px 5px tint(rgba(0, 0, 0, 0.5));
 	}
 	
 	.chatwindowlogs_zone .roundedbox.chatlog {
 		.roundedboxinner {
-			background-color: rgba(255, 255, 255, 0.7);
-			color: #000;
+			background-color: tint(rgba(255, 255, 255, 0.7));
+			color: tint(#000);
 		}
 
 		&.ownchatlog .roundedboxinner {
-			background-color: rgba(100, 100, 100, 0.7);
+			background-color: tint(rgba(100, 100, 100, 0.7));
 			color: #fff;
 		}
 	}
