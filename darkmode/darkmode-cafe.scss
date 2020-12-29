@@ -1,6 +1,6 @@
 @use "sass:map";
 @use "themes";
-$theme: themes.$purple;
+$theme: themes.$cafe;
 
 @use "func" with ($colors: $theme);
 @use "main";
