@@ -189,6 +189,25 @@ span.bgabutton_gray {
 
 	.gamelist_item {
 		box-shadow: none;
+		margin-right: 30px;
+		.game_box_image_wrap {
+			img:hover {
+				transform: scale(1.05);
+			}
+			padding: 10px;
+			border-radius: 8px;
+			border: 2px solid #111;
+			background:radial-gradient(#{"ellipse /**/at /**/center"},#{"#555/**/ -50%"},#191919);
+			.emblempremium_big {
+				position: absolute;
+				right: unset;
+				left: -16px;
+			}
+		}
+	}
+
+	.gamelist_item {
+		zoom: 110%;
 	}
 
 	.gamelist_itemrow {
@@ -198,14 +217,30 @@ span.bgabutton_gray {
 	.gamename {
 		font-size: 20px;
 		position: relative;
-    top: 10px;
+		left: 10px;
+    top: 2px;
+		color: #666;
 	}
 }
 
+/*
 .notouch-device #gamelist-module .gamelist_item:hover {
 	background-color: rgba(20, 20, 20, 0.5);
 }
+*/
+.notouch-device #gamelist-module .gamelist_item:hover {
+	background-color: transparent;
+}
 
+.notouch-device #gamelist-module a:hover {
+	color: #666;
+	text-decoration: none;
+}
+
+.notouch-device #gamelist-module a .gamename:hover {
+	color: #666;
+	text-decoration: underline;
+}
 
 /* Lobby */
 #gamelobby-module {
