@@ -1,5 +1,19 @@
 @use "_func" as c;
 
+//body::after {
+#overall-footer::after {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+	border-top: 2px solid black;
+	color: #999;
+	text-align: center;
+	font-size: 8pt;
+	content: "Reminder: You are using custom Dark Mode CSS Version 2.1. Licensed under CC BY-NC-SA 4.0. See https://boardgamearena.com/forum/viewtopic.php?f=3&t=18654 for details.";
+}
+
 /* Page and common header */
 html {
 	background: radial-gradient(#{"ellipse /**/at /**/top"},c.tint(#555), c.tint(#0A0A0A)), 
