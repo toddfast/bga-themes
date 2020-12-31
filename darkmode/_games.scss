@@ -306,3 +306,21 @@ br.clear + h3 {
 		text-shadow: -1px -1px 0 #777, 1px -1px 0 #777, -1px 1px 0 #777, 1px 1px 0 #777;
 	}
 }
+
+// Keyflower
+#market_map + #playerareas {
+	.playerArea {
+		.player-name {
+			text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+			&[style*="\000022#000000\000022"] {
+				text-shadow: -1px -1px 0 #777, 1px -1px 0 #777, -1px 1px 0 #777, 1px 1px 0 #777;
+			}
+		}
+	}
+}
+
+// Veletas
+.coord_label.luis {
+	color: #fff;
+}
+
