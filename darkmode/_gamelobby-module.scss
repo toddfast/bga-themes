@@ -2,26 +2,52 @@
 
 /* Lobby */
 #gamelobby-module {
-	/* Structure of the DOM:
-	#gamelobby-module
-		...
-		favorite_section <-- This is where .compactlobby, .verycompactlobby, and .tiny_verycompactlobby appear
-			...
-			.wannaplay_games_list
-				.game_box_wrap
-					.wannaplay_item
-						.game_box_image_wrap
-						.game_box_mask
-							.game_box_mask_content
-						.gamename .wannaplay_gamename
-							.gamenameinner
-						.wannaplayauto_play_zone
-	*/
+	// Structure of the DOM:
+	// #gamelobby-module
+	// 	...
+	// 	favorite_section <-- This is where .compactlobby, .verycompactlobby, and .tiny_verycompactlobby appear
+	// 		...
+	// 		.wannaplay_games_list
+	// 			.game_box_wrap
+	// 				.wannaplay_item
+	// 					.game_box_image_wrap
+	// 					.game_box_mask
+	// 						.game_box_mask_content
+	// 					.gamename .wannaplay_gamename
+	// 						.gamenameinner
+	// 					.wannaplayauto_play_zone
 
-	#lobby_invite_more_friend_button .lobby_invite_friend_avatar, 
-	#lobby_add_friend_button .lobby_invite_friend_avatar {
-		background-color: c.tint(#222);
+	.pageheader_menu {
+
+		.pageheader_big_switch:hover,
+		.dropdown_expanded .pageheader_big_switch {
+			background-color: #565656;
+			.switcher_zone {
+				background: linear-gradient(c.tint(#c2c2c2), c.tint(#efefef));
+			}
+		}
+
+		/* "Choose a friend to invite" */
+		#lobby_friend_list_state > h3{
+			color: white;
+		}
+
+		/* "Choose any game below to start playing with..." */
+		#lobby_invited_friend_section > h3 {
+			color: white;
+		}
+
+		#lobby_invite_more_friend_button .lobby_invite_friend_avatar, 
+		#lobby_add_friend_button .lobby_invite_friend_avatar {
+			background-color: c.tint(#222);
+		}
 	}
+	
+	// .pageheader_menu_verylarge .pageheader_big_switch:hover .switcher_zone, 
+	// .pageheader_menu_verylarge .dropdown_expanded .pageheader_big_switch .switcher_zone {
+	// 	background: linear-gradient(#c2c2c2, #efefef);
+	// }
+
 	
 	.game_box_wrap {
 		margin-right: 20px;

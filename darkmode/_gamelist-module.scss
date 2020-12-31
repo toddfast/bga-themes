@@ -11,6 +11,11 @@
 		display: none;
 	}
 
+	// Fix for overlapping form elements in original CSS
+	#col_filter_gamename {
+    margin-right: 50px;
+	}
+
 	.gamelist_item {
 		box-shadow: none;
 		margin-right: 30px;

@@ -1,5 +1,159 @@
+@use "_func" as c;
+
 .cantstop_asmodee {
 	#dicechoices {
 		color: wheat;
+	}
+}
+
+// Coloretto
+#coloretto_wrapper {
+	#round_status {
+		color: white;
+	}
+
+	#deck_count {
+		color: white;
+	}
+}
+
+// Letter tycoon
+#game_play_area {
+	.lettertycoon_area {
+		background-color: rgba(255,255,255,.2);
+		border: none;
+		color: white;
+	}
+
+	.lettertycoon_area_label {
+		color: white;
+	}
+
+	.lettertycoon_deck_info {
+		color: white;
+	}
+}
+
+// Incan Gold
+#playArea #down #decksizetext {
+	color: white;
+}
+
+// Cribbage
+#play-area #cards #cutCardSpace {
+	color: white;
+}
+
+// Innovation
+#decks_and_available_achievements {
+	color: white;
+}
+
+// 7 Wonders
+#sevenwonder_wrap {
+	#card_rotation_wrap {
+		color: white;
+		#handrotation {
+				filter: invert(1);
+		}
+	}
+}
+
+#game_play_area_wrap {
+	#discard_count {
+		color: white;
+	}
+	
+	#trees h3 {
+		color: white;
+	}
+}
+
+// Hanabi
+#hanabi_prefs_button {
+	background-color: c.tint(#ccc);
+}
+
+// Haggis
+#betpanel + h3 {
+	color: white;
+}
+
+#myhand + h3 {
+	color: white;
+}
+
+#card_played {
+	color: white;
+}
+
+// Gosu
+#gosu_wrapper {
+	h3 {
+		color: white;
+	}
+}
+
+// Xanadu
+.xdu_notifTop {
+	color: white;
+}
+
+// Amyitis
+#recruitment {
+	color: white;
+}
+
+br.clear + h3 {
+	color: white;
+}
+
+// Stir Fry Eighteen
+#deck_wrap {
+	color: white;
+}
+
+#table_setup {
+	color: white;
+}
+
+// Fleet
+#flt_counters {
+	color: white;
+}
+
+// Kahuna
+#kahuna_right_pane {
+	color: white;
+}
+
+// Krosmaster
+#krosmaster_interface {
+	.playerstock {
+		background: rgb(255,255,255,0.2);
+		h2 {
+			text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+			// Override for purple player
+			&[style$="\000022#6f1e6b\000022"] {
+				text-shadow: -1px -1px 0 #777, 1px -1px 0 #777, -1px 1px 0 #777, 1px 1px 0 #777;
+			}
+		}
+
+		.masterlist .master {
+			-webkit-box-shadow: 4px 4px 37px 0 #000;
+			-moz-box-shadow: 4px 4px 37px 0 #000;
+			box-shadow: 4px 4px 37px 0 #000;
+		}
+	} 
+}
+
+// Yokai
+#hints_wrap {
+	h3 {
+		color: white;
+	}
+
+	#deck {
+		border-color: c.tint(#999);
 	}
 }

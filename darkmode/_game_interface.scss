@@ -2,6 +2,15 @@
 
 /* Game page */
 .game_interface {
+	#spectatorbox {
+		// position: relative;
+		padding-left: 8px;
+	}
+	
+	#not_playing_help {
+		color: #0cc;
+	}
+
 	#logs {
 		overflow: scroll;
 		scrollbar-width: none;
@@ -16,13 +25,59 @@
 			background-color: c.tint(rgba(222, 222, 222, 0.65));
 			border-radius: 5px;
 		}
+
+		// Mainly for Krosmaster Arena but might be applicable elsewhere
+		.playername[style$="\000022#3ea7c6;\000022"] {
+			text-shadow: -1px -1px 0 #444, 1px -1px 0 #444, -1px 1px 0 #444, 1px 1px 0 #444;
+		}
+
+		#seemorelogs {
+			background: linear-gradient(0deg, black, transparent);
+		}
 	}
 
 	.player-board {
 		background: #eee;
+		&.spectator-mode {
+			.roundedbox_topleft, 
+			.roundedbox_topmain,
+			.roundedbox_topright,
+			.roundedbox_main,
+			.roundedbox_bottomleft,
+			.roundedbox_bottommain,
+			.roundedbox_bottomright {
+				background: unset;
+			}
+			.roundedboxinner {
+				left: 5px;
+			}
+		}
 	}
 
+	.player-name > a[style="color: #ffffff"] {
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	}
+
+	// Default for all lighter colors
 	#pagemaintitletext > span:first-of-type {
 		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 	}
+
+	// Black
+	// This hack with the escaped quotes is to get around the fact that the BGA CSS processor strips 
+	// quotes from attribute selectors that do not contain a space character. All developers can't 
+	// be great...
+	#pagemaintitletext > span[style$="\000022#000000;\000022"]:first-of-type {
+		text-shadow: -1px -1px 0 #777, 1px -1px 0 #777, -1px 1px 0 #777, 1px 1px 0 #777;
+	}
+
+	// Green
+	#pagemaintitletext > span[style$="\000022#008000;\000022"]:first-of-type {
+		text-shadow: -1px -1px 0 #060, 1px -1px 0 #060, -1px 1px 0 #060, 1px 1px 0 #060;
+	}
+	
+	// Blue
+	#pagemaintitletext > span[style$="\000022#0000ff;\000022"]:first-of-type {
+    text-shadow: -1px -1px 0 #116, 1px -1px 0 #116, -1px 1px 0 #116, 1px 1px 0 #116;
+	}	
 }
