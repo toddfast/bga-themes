@@ -129,6 +129,13 @@ br.clear + h3 {
 
 // Krosmaster
 #krosmaster_interface {
+
+	#master_list .master {
+		-webkit-box-shadow: 4px 4px 37px 0 #000;
+		-moz-box-shadow: 4px 4px 37px 0 #000;
+		box-shadow: 4px 4px 37px 0 #000;
+	}
+
 	.playerstock {
 		background: rgb(255,255,255,0.2);
 		h2 {
@@ -137,12 +144,6 @@ br.clear + h3 {
 			&[style$="\000022#6f1e6b\000022"] {
 				text-shadow: -1px -1px 0 #777, 1px -1px 0 #777, -1px 1px 0 #777, 1px 1px 0 #777;
 			}
-		}
-
-		.masterlist .master {
-			-webkit-box-shadow: 4px 4px 37px 0 #000;
-			-moz-box-shadow: 4px 4px 37px 0 #000;
-			box-shadow: 4px 4px 37px 0 #000;
 		}
 	} 
 }
@@ -155,5 +156,153 @@ br.clear + h3 {
 
 	#deck {
 		border-color: c.tint(#999);
+	}
+}
+
+// 7 Wonders Duel
+#swd_wrap {
+	.player_area_name h3,
+	.end_game_player_name {
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	}
+
+	.progress_token_outline {
+		border: 1px solid #111;
+		background: rgba(0,0,0,0.2);
+	}	
+}
+
+// Puerto Rico
+#pr_game_area {
+	.tiles_label {
+		color: #fff;
+	}
+
+	#plantations,
+	#buildings {
+		background: c.tint(rgba(0,0,0,0.2));
+	}
+}
+
+// Kingdomino
+#thething {
+	.player_view,
+	.info {
+		color: white;
+    background: c.tint(rgba(0, 0, 0, 0.1));
+	}
+}
+
+// Stone Age
+#sa_main {
+	#diceboard {
+		background: rgba(0,0,0,0.2);
+		color: white;
+		border: 2px solid #111;
+	}
+}
+
+// Welcome To
+#welcometo-container {
+	#plan-cards-container,
+	#construction-cards-container {
+		background-color: c.tint(rgba(128,128,128,0.2));
+	}
+}
+
+// Sushi Go
+#sushigo_wrapper {
+	#deck_container h3 {
+		color: #fff;
+	}
+
+	.block_title {
+		background-image: linear-gradient(180deg,hsla(0,0%,30%,.75),hsla(0,0%,10%,.75));
+	}
+}
+
+// Marco Polo II
+#zoomBox {
+	#characterSelectionDescription {
+		background: rgba(0,0,0,0.3) !important;
+	}
+}
+
+// Con Sonar
+#cards_title {
+	#torpedocards_title,
+	#playerhand_title {
+		color: white;
+	}
+}
+
+// Turn the Tide
+
+// Clans of Calendonia
+// Fix for black player name
+#coc_game {
+	#players-zone h3 span[style*="\000022#000000\000022"] {
+		text-shadow: -1px -1px 0 #777, 1px -1px 0 #777, -1px 1px 0 #777, 1px 1px 0 #777 !important;
+	}
+}
+
+// Lost cities
+#lostcities_wrapper {
+	#round_count,
+	#deck_count {
+		color: #fff !important;
+	}
+}
+
+// For Sale
+#game_play_area_wrap {
+	#player_bid_zone {
+		.player_bid_zone span[style*="\000022#000000\000022"] {
+			text-shadow: -1px -1px 0 #777, 1px -1px 0 #777, -1px 1px 0 #777, 1px 1px 0 #777;
+		}
+	}
+}
+
+// Dingo's Dreams
+#hud {
+	box-shadow: inset 0 0 10px c.tint(rgba(17,17,17,.67));
+	&+ .play_grids {
+		.play_grid {
+			box-shadow: inset 0 0 10px c.tint(rgba(17,17,17,.67));
+			.player_name {
+				text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000 !important;
+			}
+		}
+	}
+}
+
+// Blue Skies
+#bsk {
+	color: white;
+}
+
+// Dice Forge
+#turn-container {
+	#nb-turns-container {
+		// text-shadow: -1px -1px 0 #777, 1px -1px 0 #777, -1px 1px 0 #777, 1px 1px 0 #777;
+		color: #fff;
+	}
+}
+
+// Thurns & Taxis
+#thurntaxis_board {
+	#carriages,
+	.gameAreaContainer {
+		border: c.tint(rgba(100,100,100,.5));
+		h3 {
+			color: #fff;
+		}
+	}
+}
+
+// Teotihuacan
+#player_table {
+	h3[style*="\000022#000000\000022"] {
+		text-shadow: -1px -1px 0 #777, 1px -1px 0 #777, -1px 1px 0 #777, 1px 1px 0 #777;
 	}
 }

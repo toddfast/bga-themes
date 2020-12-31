@@ -12,6 +12,13 @@
 	}
 }
 
+// This is questionable without testing
+.whiteblock {
+	background: rgba(255,255,255,0.3);
+	background: rgba(0,0,0,0.2);
+	color: white;
+}
+
 .gametable {
 	border: 1px c.tint(#000) solid;
 	background-color: c.tint(#444);
@@ -48,6 +55,10 @@ span.bgabutton_gray {
 .pageheader_menu_verylarge .pageheader_big_switch {
 	background-color: c.tint(#333);
 	color: #FFF;
+}
+
+#table_warnings {
+	color: #000;
 }
 
 .tabbed_slider_bar_left, .tabbed_slider_bar_right {

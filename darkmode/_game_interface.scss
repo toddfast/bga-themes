@@ -68,16 +68,16 @@
 	// quotes from attribute selectors that do not contain a space character. All developers can't 
 	// be great...
 	#pagemaintitletext > span[style$="\000022#000000;\000022"]:first-of-type {
-		text-shadow: -1px -1px 0 #777, 1px -1px 0 #777, -1px 1px 0 #777, 1px 1px 0 #777;
+		text-shadow: -1px -1px 0 #777, 1px -1px 0 #777, -1px 1px 0 #777, 1px 1px 0 #777 !important;
 	}
 
 	// Green
 	#pagemaintitletext > span[style$="\000022#008000;\000022"]:first-of-type {
-		text-shadow: -1px -1px 0 #060, 1px -1px 0 #060, -1px 1px 0 #060, 1px 1px 0 #060;
+		text-shadow: -1px -1px 0 #030, 1px -1px 0 #030, -1px 1px 0 #030, 1px 1px 0 #030 !important;
 	}
 	
 	// Blue
 	#pagemaintitletext > span[style$="\000022#0000ff;\000022"]:first-of-type {
-    text-shadow: -1px -1px 0 #116, 1px -1px 0 #116, -1px 1px 0 #116, 1px 1px 0 #116;
+    text-shadow: -1px -1px 0 #116, 1px -1px 0 #116, -1px 1px 0 #116, 1px 1px 0 #116 !important;
 	}	
 }
